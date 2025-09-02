@@ -1,0 +1,17 @@
+{
+  "os":  "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2025-09-02T01:09:13.684566Z",
+  "program":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/train_production_model.py",
+  "codePath":  "train_production_model.py",
+  "codePathLocal":  "train_production_model.py",
+  "git":  {
+    "remote":  "https://github.com/filmboy3/training_model_PT.git",
+    "commit":  "3a948515cd65eb29854355a37e6dc6126299cd4e"
+  },
+  "email":  "jonathanschwartz30@gmail.com",
+  "root":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine",
+  "host":  "MacBook-Pro.local",
+  "executable":  "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/bin/python",
+  "writerId":  "ojlabb1ygze9x97lgiengf9c32wt1tm7"
+}
