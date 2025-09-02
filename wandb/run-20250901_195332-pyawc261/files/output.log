@@ -1,0 +1,35 @@
+2025-09-01 19:53:33,675 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:53:33,676 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:53:33,676 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:53:33,676 - src.training.dataset - INFO - Generating synthetic dataset...
+2025-09-01 19:53:33,677 - src.data.simple_physics_engine - INFO - Generating 500 synthetic squat sequences...
+2025-09-01 19:53:33,677 - src.data.simple_physics_engine - INFO - Generated 0/500 sequences
+2025-09-01 19:53:33,952 - src.data.simple_physics_engine - INFO - Generated 100/500 sequences
+2025-09-01 19:53:34,111 - src.data.simple_physics_engine - INFO - Generated 200/500 sequences
+2025-09-01 19:53:34,266 - src.data.simple_physics_engine - INFO - Generated 300/500 sequences
+2025-09-01 19:53:34,422 - src.data.simple_physics_engine - INFO - Generated 400/500 sequences
+2025-09-01 19:53:34,653 - src.data.simple_physics_engine - INFO - Dataset saved to data/synthetic_squats.h5
+2025-09-01 19:53:34,653 - src.data.simple_physics_engine - INFO - Dataset shape: (500, 200, 17, 3)
+2025-09-01 19:53:34,655 - src.training.dataset - INFO - Dataset saved to data/synthetic_squats.h5
+2025-09-01 19:53:34,671 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:53:34,696 - src.training.dataset - INFO - Loaded 50 sequences for val split
+/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 19:53:39,627 - __main__ - ERROR - Training failed with error: Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/training/dataset.py", line 118, in __getitem__
+    imu_data = self.domain_randomizer.simulate_sensor_noise(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        imu_tensor, duration
+        ^^^^^^^^^^^^^^^^^^^^
+    ).numpy()
+    ^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/data/domain_randomization.py", line 113, in simulate_sensor_noise
+    noisy_data = clean_imu_data.copy()
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?

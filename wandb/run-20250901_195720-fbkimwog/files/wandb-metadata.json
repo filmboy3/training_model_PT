@@ -1,0 +1,38 @@
+{
+  "os":  "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2025-09-01T23:57:20.800943Z",
+  "args":  [
+    "--config",
+    "mvm",
+    "--debug"
+  ],
+  "program":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "email":  "jonathanschwartz30@gmail.com",
+  "root":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine",
+  "host":  "MacBook-Pro.local",
+  "executable":  "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/bin/python3",
+  "cpu_count":  12,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "477362196480"
+    }
+  },
+  "memory":  {
+    "total":  "25769803776"
+  },
+  "apple":  {
+    "name":  "Apple M4 Pro",
+    "ecpuCores":  4,
+    "pcpuCores":  8,
+    "gpuCores":  16,
+    "memoryGb":  24,
+    "swapTotalBytes":  "10737418240",
+    "ramTotalBytes":  "25769803776"
+  },
+  "writerId":  "7l9ev8tbrsu1t6l07o9vl3l5azvzc9fa"
+}

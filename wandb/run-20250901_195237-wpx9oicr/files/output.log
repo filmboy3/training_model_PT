@@ -1,0 +1,8 @@
+2025-09-01 19:52:38,623 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:52:38,623 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:52:38,623 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:52:38,623 - src.training.dataset - INFO - Generating synthetic dataset...
+2025-09-01 19:52:38,631 - src.data.physics_engine - ERROR - Failed to load MuJoCo model: Error: range[0] should be 0 in ball joint
+Element name 'larm', id 1, line 25
+2025-09-01 19:52:38,631 - __main__ - ERROR - Training failed with error: Error: range[0] should be 0 in ball joint
+Element name 'larm', id 1, line 25

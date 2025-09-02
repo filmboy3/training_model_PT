@@ -1,0 +1,18 @@
+{
+  "os":  "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2025-09-01T23:52:37.120383Z",
+  "args":  [
+    "--config",
+    "mvm",
+    "--debug"
+  ],
+  "program":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "email":  "jonathanschwartz30@gmail.com",
+  "root":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine",
+  "host":  "MacBook-Pro.local",
+  "executable":  "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/bin/python3",
+  "writerId":  "yhppx5e4m2p918uyz9s0gho03z19m8vi"
+}

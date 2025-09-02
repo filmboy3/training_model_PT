@@ -1,0 +1,28 @@
+2025-09-01 19:55:39,168 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:55:39,168 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:55:39,168 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:55:39,169 - src.training.dataset - INFO - Using existing dataset at data/synthetic_squats.h5
+2025-09-01 19:55:39,210 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:55:39,253 - src.training.dataset - INFO - Loaded 50 sequences for val split
+/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+2025-09-01 19:55:44,227 - __main__ - ERROR - Training failed with error: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/training/dataset.py", line 118, in __getitem__
+    imu_data = self.domain_randomizer.simulate_sensor_noise(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        imu_tensor, duration
+        ^^^^^^^^^^^^^^^^^^^^
+    ).numpy()
+    ^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/data/domain_randomization.py", line 134, in simulate_sensor_noise
+    accel_data = self._apply_axis_misalignment(accel_data, config['axis_misalignment_deg'])
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/data/domain_randomization.py", line 236, in _apply_axis_misalignment
+    aligned_data[t] = R_misalign @ data[t]
+                      ~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for @: 'numpy.ndarray' and 'Tensor'

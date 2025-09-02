@@ -1,0 +1,85 @@
+<mujoco model="simple_humanoid">
+  <compiler angle="radian" coordinate="local"/>
+  
+  <default>
+    <joint damping="1" limited="true"/>
+    <geom conaffinity="0" condim="3" density="1000" friction="1 0.5 0.5" rgba="0.8 0.6 0.4 1"/>
+  </default>
+  
+  <worldbody>
+    <light diffuse="1 1 1" dir="0 0 -1" directional="true" pos="0 0 3"/>
+    <geom name="floor" pos="0 0 0" size="5 5 0.1" type="plane" rgba="0.9 0.9 0.9 1"/>
+    
+    <body name="torso" pos="0 0 1.0">
+      <freejoint name="root"/>
+      <geom name="torso" size="0.1 0.05 0.2" type="box" rgba="0.7 0.7 0.9 1"/>
+      
+      <!-- Left leg -->
+      <body name="left_thigh" pos="0 0.05 -0.2">
+        <joint name="left_hip" type="hinge" axis="0 1 0" range="-120 30" pos="0 0 0"/>
+        <geom name="left_thigh" size="0.04 0.04 0.15" type="box" rgba="0.9 0.7 0.7 1"/>
+        
+        <body name="left_shin" pos="0 0 -0.3">
+          <joint name="left_knee" type="hinge" axis="0 1 0" range="-150 0" pos="0 0 0"/>
+          <geom name="left_shin" size="0.03 0.03 0.15" type="box" rgba="0.7 0.9 0.7 1"/>
+          
+          <body name="left_foot" pos="0 0 -0.15">
+            <joint name="left_ankle" type="hinge" axis="0 1 0" range="-45 45" pos="0 0 0"/>
+            <geom name="left_foot" size="0.08 0.03 0.02" type="box" rgba="0.9 0.9 0.7 1"/>
+          </body>
+        </body>
+      </body>
+      
+      <!-- Right leg -->
+      <body name="right_thigh" pos="0 -0.05 -0.2">
+        <joint name="right_hip" type="hinge" axis="0 1 0" range="-120 30" pos="0 0 0"/>
+        <geom name="right_thigh" size="0.04 0.04 0.15" type="box" rgba="0.9 0.7 0.7 1"/>
+        
+        <body name="right_shin" pos="0 0 -0.3">
+          <joint name="right_knee" type="hinge" axis="0 1 0" range="-150 0" pos="0 0 0"/>
+          <geom name="right_shin" size="0.03 0.03 0.15" type="box" rgba="0.7 0.9 0.7 1"/>
+          
+          <body name="right_foot" pos="0 0 -0.15">
+            <joint name="right_ankle" type="hinge" axis="0 1 0" range="-45 45" pos="0 0 0"/>
+            <geom name="right_foot" size="0.08 0.03 0.02" type="box" rgba="0.9 0.9 0.7 1"/>
+          </body>
+        </body>
+      </body>
+      
+      <!-- Left arm -->
+      <body name="left_upper_arm" pos="0 0.15 0.1">
+        <joint name="left_shoulder" type="hinge" axis="0 1 0" range="-90 90" pos="0 0 0"/>
+        <geom name="left_upper_arm" size="0.025 0.025 0.1" type="box" rgba="0.7 0.7 0.9 1"/>
+        
+        <body name="left_forearm" pos="0 0 -0.2">
+          <joint name="left_elbow" type="hinge" axis="0 1 0" range="-150 0" pos="0 0 0"/>
+          <geom name="left_forearm" size="0.02 0.02 0.08" type="box" rgba="0.9 0.7 0.9 1"/>
+        </body>
+      </body>
+      
+      <!-- Right arm -->
+      <body name="right_upper_arm" pos="0 -0.15 0.1">
+        <joint name="right_shoulder" type="hinge" axis="0 1 0" range="-90 90" pos="0 0 0"/>
+        <geom name="right_upper_arm" size="0.025 0.025 0.1" type="box" rgba="0.7 0.7 0.9 1"/>
+        
+        <body name="right_forearm" pos="0 0 -0.2">
+          <joint name="right_elbow" type="hinge" axis="0 1 0" range="-150 0" pos="0 0 0"/>
+          <geom name="right_forearm" size="0.02 0.02 0.08" type="box" rgba="0.9 0.7 0.9 1"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  
+  <actuator>
+    <motor joint="left_hip" name="left_hip_motor" ctrlrange="-50 50"/>
+    <motor joint="left_knee" name="left_knee_motor" ctrlrange="-50 50"/>
+    <motor joint="left_ankle" name="left_ankle_motor" ctrlrange="-20 20"/>
+    <motor joint="right_hip" name="right_hip_motor" ctrlrange="-50 50"/>
+    <motor joint="right_knee" name="right_knee_motor" ctrlrange="-50 50"/>
+    <motor joint="right_ankle" name="right_ankle_motor" ctrlrange="-20 20"/>
+    <motor joint="left_shoulder" name="left_shoulder_motor" ctrlrange="-30 30"/>
+    <motor joint="left_elbow" name="left_elbow_motor" ctrlrange="-30 30"/>
+    <motor joint="right_shoulder" name="right_shoulder_motor" ctrlrange="-30 30"/>
+    <motor joint="right_elbow" name="right_elbow_motor" ctrlrange="-30 30"/>
+  </actuator>
+</mujoco>

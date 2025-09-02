@@ -1,0 +1,147 @@
+_wandb:
+    value:
+        cli_version: 0.21.3
+        e:
+            7l9ev8tbrsu1t6l07o9vl3l5azvzc9fa:
+                apple:
+                    ecpuCores: 4
+                    gpuCores: 16
+                    memoryGb: 24
+                    name: Apple M4 Pro
+                    pcpuCores: 8
+                    ramTotalBytes: "25769803776"
+                    swapTotalBytes: "10737418240"
+                args:
+                    - --config
+                    - mvm
+                    - --debug
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 12
+                cpu_count_logical: 12
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "477362196480"
+                email: jonathanschwartz30@gmail.com
+                executable: /Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/bin/python3
+                host: MacBook-Pro.local
+                memory:
+                    total: "25769803776"
+                os: macOS-15.6-arm64-arm-64bit-Mach-O
+                program: /Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/train.py
+                python: CPython 3.13.3
+                root: /Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine
+                startedAt: "2025-09-01T23:57:20.800943Z"
+                writerId: 7l9ev8tbrsu1t6l07o9vl3l5azvzc9fa
+        m: []
+        python_version: 3.13.3
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 1
+                - 2
+                - 13
+                - 15
+                - 16
+            "4": 3.13.3
+            "5": 0.21.3
+            "12": 0.21.3
+            "13": darwin-arm64
+data:
+    value:
+        amplitude_scaling: true
+        batch_size: 8
+        dt: 0.01
+        duration_range:
+            - 3
+            - 8
+        num_sequences: 500
+        num_workers: 4
+        physics_randomization: true
+        placement_randomization: true
+        rotation_augmentation: true
+        sensor_noise: true
+        sequence_length: 200
+        speed_variation: 0.3
+        squat_depth_range:
+            - 0.3
+            - 0.8
+        temporal_jitter: true
+        test_split: 0.1
+        train_split: 0.8
+        val_split: 0.1
+experiment:
+    value:
+        experiment_name: mvm_squat_baseline_debug
+        log_attention_maps: true
+        log_feature_distributions: true
+        log_interval: 10
+        log_pose_samples: true
+        mode: min
+        monitor_metric: val_pose_loss
+        num_vis_samples: 4
+        run_name: null
+        save_interval: 100
+        save_top_k: 3
+        use_wandb: true
+        val_interval: 50
+        wandb_entity: null
+        wandb_project: quantumleap-pose-engine
+        wandb_tags:
+            - mvm
+            - squat-only
+            - physics-first
+model:
+    value:
+        d_model: 256
+        dropout: 0.1
+        input_channels: 6
+        nhead: 8
+        num_cnn_layers: 4
+        num_exercise_types: 1
+        num_form_classes: 5
+        num_joints: 17
+        num_transformer_layers: 6
+optimization:
+    value:
+        betas:
+            - 0.9
+            - 0.999
+        eps: 1e-08
+        exercise_weight: 0.5
+        form_weight: 0.3
+        learnable_task_weights: true
+        learning_rate: 0.0001
+        max_epochs: 5
+        max_grad_norm: 1
+        min_delta: 0.0001
+        min_lr: 1e-06
+        optimizer: adamw
+        patience: 20
+        physics_constraint_weight: 0.05
+        pose_weight: 1
+        scheduler: cosine_annealing
+        uncertainty_weight: 0.1
+        use_amp: true
+        warmup_epochs: 10
+        weight_decay: 1e-05
+system:
+    value:
+        benchmark: true
+        channels_last: false
+        checkpoint_dir: ./checkpoints
+        compile_model: false
+        data_dir: ./data
+        deterministic: true
+        device: mps
+        distributed: false
+        gpu_ids:
+            - 0
+        output_dir: ./outputs
+        rank: 0
+        seed: 42
+        world_size: 1

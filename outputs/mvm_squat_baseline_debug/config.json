@@ -1,0 +1,101 @@
+{
+  "model": {
+    "input_channels": 6,
+    "d_model": 256,
+    "nhead": 8,
+    "num_transformer_layers": 6,
+    "num_cnn_layers": 4,
+    "num_joints": 17,
+    "num_exercise_types": 1,
+    "num_form_classes": 5,
+    "dropout": 0.1
+  },
+  "data": {
+    "num_sequences": 500,
+    "sequence_length": 200,
+    "dt": 0.01,
+    "squat_depth_range": [
+      0.3,
+      0.8
+    ],
+    "speed_variation": 0.3,
+    "duration_range": [
+      3.0,
+      8.0
+    ],
+    "physics_randomization": true,
+    "sensor_noise": true,
+    "placement_randomization": true,
+    "batch_size": 8,
+    "num_workers": 4,
+    "train_split": 0.8,
+    "val_split": 0.1,
+    "test_split": 0.1,
+    "temporal_jitter": true,
+    "amplitude_scaling": true,
+    "rotation_augmentation": true
+  },
+  "optimization": {
+    "optimizer": "adamw",
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": "cosine_annealing",
+    "warmup_epochs": 10,
+    "max_epochs": 5,
+    "min_lr": 1e-06,
+    "pose_weight": 1.0,
+    "exercise_weight": 0.5,
+    "form_weight": 0.3,
+    "uncertainty_weight": 0.1,
+    "physics_constraint_weight": 0.05,
+    "learnable_task_weights": true,
+    "max_grad_norm": 1.0,
+    "use_amp": true,
+    "patience": 20,
+    "min_delta": 0.0001
+  },
+  "experiment": {
+    "use_wandb": true,
+    "wandb_project": "quantumleap-pose-engine",
+    "wandb_entity": null,
+    "wandb_tags": [
+      "mvm",
+      "squat-only",
+      "physics-first"
+    ],
+    "experiment_name": "mvm_squat_baseline_debug",
+    "run_name": null,
+    "log_interval": 10,
+    "val_interval": 50,
+    "save_interval": 100,
+    "save_top_k": 3,
+    "monitor_metric": "val_pose_loss",
+    "mode": "min",
+    "log_pose_samples": true,
+    "log_attention_maps": true,
+    "log_feature_distributions": true,
+    "num_vis_samples": 4
+  },
+  "system": {
+    "device": "mps",
+    "gpu_ids": [
+      0
+    ],
+    "distributed": false,
+    "world_size": 1,
+    "rank": 0,
+    "seed": 42,
+    "deterministic": true,
+    "benchmark": true,
+    "data_dir": "./data",
+    "output_dir": "./outputs",
+    "checkpoint_dir": "./checkpoints",
+    "compile_model": false,
+    "channels_last": false
+  }
+}

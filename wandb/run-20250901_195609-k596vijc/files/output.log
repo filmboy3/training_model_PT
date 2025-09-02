@@ -1,0 +1,13 @@
+2025-09-01 19:56:10,434 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:56:10,435 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:56:10,435 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:56:10,435 - src.training.dataset - INFO - Using existing dataset at data/synthetic_squats.h5
+2025-09-01 19:56:10,477 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:56:10,499 - src.training.dataset - INFO - Loaded 50 sequences for val split
+/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/training/trainer.py:236: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.config.optimization.use_amp):
+/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+2025-09-01 19:56:36,518 - __main__ - ERROR - Training failed with error: 'masks'

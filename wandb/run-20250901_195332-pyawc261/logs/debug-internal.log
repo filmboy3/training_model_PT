@@ -1,0 +1,12 @@
+{"time":"2025-09-01T19:53:33.144335-04:00","level":"INFO","msg":"stream: starting","core version":"0.21.3"}
+{"time":"2025-09-01T19:53:33.409481-04:00","level":"INFO","msg":"stream: created new stream","id":"pyawc261"}
+{"time":"2025-09-01T19:53:33.409526-04:00","level":"INFO","msg":"stream: started","id":"pyawc261"}
+{"time":"2025-09-01T19:53:33.409548-04:00","level":"INFO","msg":"writer: started","stream_id":"pyawc261"}
+{"time":"2025-09-01T19:53:33.409547-04:00","level":"INFO","msg":"sender: started","stream_id":"pyawc261"}
+{"time":"2025-09-01T19:53:33.409557-04:00","level":"INFO","msg":"handler: started","stream_id":"pyawc261"}
+{"time":"2025-09-01T19:53:39.628792-04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run metadata","runtime_seconds":0.000666084}],"total_operations":1}}
+{"time":"2025-09-01T19:53:40.254658-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T19:53:40.619225-04:00","level":"INFO","msg":"stream: closing","id":"pyawc261"}
+{"time":"2025-09-01T19:53:40.619304-04:00","level":"INFO","msg":"sender: closed","stream_id":"pyawc261"}
+{"time":"2025-09-01T19:53:40.619487-04:00","level":"INFO","msg":"handler: closed","stream_id":"pyawc261"}
+{"time":"2025-09-01T19:53:40.619505-04:00","level":"INFO","msg":"stream: closed","id":"pyawc261"}
