@@ -20,7 +20,7 @@ class ProductionDataset(Dataset):
         
         # Load metadata
         with h5py.File(self.data_path, 'r') as f:
-            self.num_sequences = f.attrs['metadata']['num_sequences']
+            self.num_sequences = f['metadata'].attrs['num_sequences']
             self.exercise_labels = f['exercise_labels'][:]
             self.form_labels = f['form_labels'][:]
         
@@ -31,28 +31,33 @@ class ProductionDataset(Dataset):
     
     def __getitem__(self, idx):
         with h5py.File(self.data_path, 'r') as f:
-            # Load pose and IMU data
-            poses = f['poses'][f'sequence_{idx}'][:]
-            imu_data = f['imu_data'][f'sequence_{idx}'][:]
+            # Load sequence data
+            poses = torch.tensor(f[f'poses/sequence_{idx}'][:], dtype=torch.float32)
+            imu_data = torch.tensor(f[f'imu_data/sequence_{idx}'][:], dtype=torch.float32)
             
-            # Pad or truncate to fixed length
-            seq_len = min(len(poses), self.max_seq_length)
+            # Get labels
+            exercise_label = torch.tensor([self.exercise_labels[idx]], dtype=torch.long)
+            form_label = torch.tensor([self.form_labels[idx]], dtype=torch.long)
             
-            # Pad sequences if needed
-            if len(poses) < self.max_seq_length:
-                poses_padded = np.zeros((self.max_seq_length, poses.shape[1]))
-                poses_padded[:len(poses)] = poses
-                
-                imu_padded = np.zeros((self.max_seq_length, imu_data.shape[1]))
-                imu_padded[:len(imu_data)] = imu_data
-            else:
-                poses_padded = poses[:self.max_seq_length]
-                imu_padded = imu_data[:self.max_seq_length]
+            # Get actual sequence length
+            actual_seq_length = poses.shape[0]
+            
+            # Pad or truncate to max_seq_length
+            if actual_seq_length < self.max_seq_length:
+                # Pad sequences
+                pad_length = self.max_seq_length - actual_seq_length
+                poses = torch.cat([poses, torch.zeros(pad_length, poses.shape[1])], dim=0)
+                imu_data = torch.cat([imu_data, torch.zeros(pad_length, imu_data.shape[1])], dim=0)
+            elif actual_seq_length > self.max_seq_length:
+                # Truncate sequences
+                poses = poses[:self.max_seq_length]
+                imu_data = imu_data[:self.max_seq_length]
+                actual_seq_length = self.max_seq_length
             
             return {
-                'imu_data': torch.FloatTensor(imu_padded),
-                'poses': torch.FloatTensor(poses_padded),
-                'exercise_label': torch.LongTensor([self.exercise_labels[idx]]),
-                'form_label': torch.LongTensor([self.form_labels[idx]]),
-                'seq_length': torch.LongTensor([seq_len])
+                'imu_data': imu_data,
+                'poses': poses,
+                'exercise_label': exercise_label,
+                'form_label': form_label,
+                'seq_length': torch.tensor([actual_seq_length], dtype=torch.long)
             }

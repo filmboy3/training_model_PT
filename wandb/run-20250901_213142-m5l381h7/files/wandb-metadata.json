@@ -1,0 +1,17 @@
+{
+  "os":  "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2025-09-02T01:31:42.424465Z",
+  "program":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/smoke_test.py",
+  "codePath":  "smoke_test.py",
+  "codePathLocal":  "smoke_test.py",
+  "git":  {
+    "remote":  "https://github.com/filmboy3/training_model_PT.git",
+    "commit":  "e12676c323bbdf8d10fdc3809ffd5e8ef51ecdb0"
+  },
+  "email":  "jonathanschwartz30@gmail.com",
+  "root":  "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine",
+  "host":  "MacBook-Pro.local",
+  "executable":  "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/bin/python",
+  "writerId":  "1suej2he0ymot6pla0kwllsxplnlwr10"
+}

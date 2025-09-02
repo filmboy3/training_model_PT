@@ -18,9 +18,9 @@ import time
 from typing import Dict, Any
 
 from src.models.hdt_architecture import HybridDisentanglingTransformer
-from src.training.dataset import QuantumLeapDataset
-from src.training.trainer import QuantumLeapTrainer
-from src.training.loss import MultiTaskLoss
+from simple_dataset_loader import ProductionDataset
+# from src.training.trainer import QuantumLeapTrainer  # Not needed for this simplified version
+from src.models.losses import MultiTaskLoss
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -121,39 +121,30 @@ def create_model(config: Dict[str, Any]) -> HybridDisentanglingTransformer:
     return model
 
 def create_datasets(config: Dict[str, Any]):
-    """Create train/val/test datasets."""
-    data_config = config['data']
-    dataset_path = Path(data_config['dataset_path'])
+    """Create train, validation, and test datasets."""
+    logger.info("Creating datasets...")
     
+    # Dataset path
+    dataset_path = Path("data/production_squats_10k.h5")
     if not dataset_path.exists():
         raise FileNotFoundError(f"Dataset not found: {dataset_path}")
     
     logger.info(f"Loading dataset from: {dataset_path}")
     
-    # Create minimal config for dataset
-    from src.training.config import DataConfig
-    data_config_obj = DataConfig(
-        num_sequences=10000,
-        sequence_length=config['model']['max_seq_length'],
-        batch_size=config['training']['batch_size']
-    )
-    
-    # Create full dataset
-    full_dataset = QuantumLeapDataset(
+    # Load full dataset using ProductionDataset
+    full_dataset = ProductionDataset(
         data_path=str(dataset_path),
-        config=data_config_obj,
-        split='train'
+        max_seq_length=config['model']['sequence_length']
     )
     
     # Split dataset
     total_size = len(full_dataset)
-    train_size = int(data_config['train_split'] * total_size)
-    val_size = int(data_config['val_split'] * total_size)
+    train_size = int(config['data']['train_split'] * total_size)
+    val_size = int(config['data']['val_split'] * total_size)
     test_size = total_size - train_size - val_size
     
     train_dataset, val_dataset, test_dataset = torch.utils.data.random_split(
-        full_dataset, [train_size, val_size, test_size],
-        generator=torch.Generator().manual_seed(42)
+        full_dataset, [train_size, val_size, test_size]
     )
     
     logger.info(f"Dataset splits - Train: {train_size}, Val: {val_size}, Test: {test_size}")

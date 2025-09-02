@@ -1,0 +1,1 @@
+{"smoke_test/error":"The size of tensor a (13) must match the size of tensor b (200) at non-singleton dimension 1","_timestamp":1.756778853888365e+09,"_wandb":{"runtime":7},"_runtime":7,"_step":0,"smoke_test/status":"FAILED"}

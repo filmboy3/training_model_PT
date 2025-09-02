@@ -1,0 +1,1 @@
+{"_step":0,"_wandb":{"runtime":7},"_runtime":7,"smoke_test/status":"FAILED","smoke_test/error":"The size of tensor a (3) must match the size of tensor b (51) at non-singleton dimension 3","_timestamp":1.756776820897307e+09}

@@ -1,0 +1,1 @@
+{"smoke_test/status":"FAILED","smoke_test/error":"MultiTaskLoss.forward() takes from 3 to 4 positional arguments but 8 were given","_timestamp":1.7567767380499341e+09,"_step":0,"_wandb":{"runtime":7},"_runtime":7}

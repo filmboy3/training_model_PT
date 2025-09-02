@@ -66,7 +66,7 @@ class IMUConvEncoder(nn.Module):
                 nn.Dropout(0.1),
                 
                 nn.Conv1d(out_channels, out_channels, kernel_size=5,
-                         padding=2, stride=2),  # Downsample
+                         padding=2, stride=1),  # No downsampling
                 nn.BatchNorm1d(out_channels),
                 nn.ReLU(inplace=True),
                 nn.Dropout(0.1)

@@ -37,10 +37,15 @@ class DataConfig:
     speed_variation: float = 0.3
     duration_range: tuple = (3.0, 8.0)
     
-    # Domain randomization
+    # Domain randomization - expanded ranges for Phase 2
     physics_randomization: bool = True
     sensor_noise: bool = True
     placement_randomization: bool = True
+    
+    # Enhanced DR parameters (for future expansion)
+    gravity_range: tuple = (9.7, 9.9)  # TODO: Expand to (9.5, 10.0) in Phase 2
+    body_mass_range: tuple = (0.9, 1.1)  # TODO: Expand to (0.7, 1.3) in Phase 2
+    imu_noise_range: tuple = (0.01, 0.1)  # TODO: Expand to (0.005, 0.2) in Phase 2
     
     # Data loading
     batch_size: int = 32
