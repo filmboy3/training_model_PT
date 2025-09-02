@@ -1,0 +1,87 @@
+
+        <mujoco model="humanoid_squat">
+            <compiler angle="degree" inertiafromgeom="true"/>
+            <default>
+                <joint armature="1" damping="1" limited="true"/>
+                <geom friction="1 0.1 0.1" rgba="0.8 0.6 0.4 1"/>
+            </default>
+            
+            <worldbody>
+                <light cutoff="100" diffuse="1 1 1" dir="-0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular=".1 .1 .1"/>
+                <geom name="floor" pos="0 0 0" size="40 40 40" type="plane" rgba="0.8 0.9 0.8 1"/>
+                
+                <body name="torso1" pos="0 0 1.4">
+                    <geom name="torso1" type="capsule" size="0.07 0.1" fromto="0 -.07 0 0 .07 0"/>
+                    <geom name="head" type="sphere" pos="0 0 .19" size="0.09"/>
+                    <geom name="uwaist" type="capsule" size="0.06 0.06" fromto="-.01 -.06 -.12 -.01 .06 -.12"/>
+                    <geom name="lwaist" type="capsule" size="0.06 0.06" fromto="-.01 -.06 -.24 -.01 .06 -.24"/>
+                    <geom name="butt" type="capsule" size="0.09 0.07" fromto="-.02 -.07 -.28 -.02 .07 -.28"/>
+                    
+                    <joint name="root" type="free"/>
+                    
+                    <!-- Arms -->
+                    <body name="larm" pos="0 0.18 .14">
+                        <geom name="larm" type="capsule" size="0.04 0.1" fromto=".01 .01 .01 .2 .02 .02"/>
+                        <joint name="larm" type="ball" pos="0 0 0" range="-30 30"/>
+                        
+                        <body name="lforearm" pos=".2 .02 .02">
+                            <geom name="lforearm" type="capsule" size="0.031 0.1" fromto="0 0 0 .2 0 0"/>
+                            <joint name="lforearm" type="hinge" pos="0 0 0" axis="0 1 0" range="-90 50"/>
+                        </body>
+                    </body>
+                    
+                    <body name="rarm" pos="0 -0.18 .14">
+                        <geom name="rarm" type="capsule" size="0.04 0.1" fromto=".01 -.01 .01 .2 -.02 .02"/>
+                        <joint name="rarm" type="ball" pos="0 0 0" range="-30 30"/>
+                        
+                        <body name="rforearm" pos=".2 -.02 .02">
+                            <geom name="rforearm" type="capsule" size="0.031 0.1" fromto="0 0 0 .2 0 0"/>
+                            <joint name="rforearm" type="hinge" pos="0 0 0" axis="0 1 0" range="-90 50"/>
+                        </body>
+                    </body>
+                    
+                    <!-- Legs -->
+                    <body name="pelvis" pos="0 0 -0.165">
+                        <geom name="pelvis" type="capsule" size="0.09 0.07" fromto="-.02 -.07 0 -.02 .07 0"/>
+                        
+                        <body name="lthigh" pos="0 0.1 0">
+                            <geom name="lthigh" type="capsule" size="0.06 0.17" fromto="0 0 0 0 0 -.34"/>
+                            <joint name="lthigh" type="ball" pos="0 0 0" range="-30 30"/>
+                            
+                            <body name="lshin" pos="0 0 -.403">
+                                <geom name="lshin" type="capsule" size="0.049 0.15" fromto="0 0 0 0 0 -.3"/>
+                                <joint name="lshin" type="hinge" pos="0 0 0" axis="0 1 0" range="-150 0"/>
+                                
+                                <body name="lfoot" pos="0 0 -.39">
+                                    <geom name="lfoot" type="capsule" size="0.027 0.105" fromto="-.07 0 0 .14 0 0"/>
+                                    <joint name="lfoot" type="ball" pos="0 0 0" range="-30 30"/>
+                                </body>
+                            </body>
+                        </body>
+                        
+                        <body name="rthigh" pos="0 -0.1 0">
+                            <geom name="rthigh" type="capsule" size="0.06 0.17" fromto="0 0 0 0 0 -.34"/>
+                            <joint name="rthigh" type="ball" pos="0 0 0" range="-30 30"/>
+                            
+                            <body name="rshin" pos="0 0 -.403">
+                                <geom name="rshin" type="capsule" size="0.049 0.15" fromto="0 0 0 0 0 -.3"/>
+                                <joint name="rshin" type="hinge" pos="0 0 0" axis="0 1 0" range="-150 0"/>
+                                
+                                <body name="rfoot" pos="0 0 -.39">
+                                    <geom name="rfoot" type="capsule" size="0.027 0.105" fromto="-.07 0 0 .14 0 0"/>
+                                    <joint name="rfoot" type="ball" pos="0 0 0" range="-30 30"/>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </worldbody>
+            
+            <actuator>
+                <motor name="lthigh_motor" joint="lthigh" gear="150"/>
+                <motor name="rthigh_motor" joint="rthigh" gear="150"/>
+                <motor name="lshin_motor" joint="lshin" gear="150"/>
+                <motor name="rshin_motor" joint="rshin" gear="150"/>
+            </actuator>
+        </mujoco>
+        

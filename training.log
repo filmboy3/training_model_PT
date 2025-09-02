@@ -1,0 +1,186 @@
+2025-09-01 19:52:36,030 - __main__ - INFO - ================================================================================
+2025-09-01 19:52:36,030 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:52:36,030 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:52:36,030 - __main__ - INFO - ================================================================================
+2025-09-01 19:52:36,040 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:52:36,040 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:52:36,040 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:52:36,040 - __main__ - INFO - Device: mps
+2025-09-01 19:52:36,040 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:52:36,040 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:52:36,040 - __main__ - INFO - Batch size: 8
+2025-09-01 19:52:36,040 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:52:36,041 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:52:38,623 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:52:38,623 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:52:38,623 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:52:38,623 - src.training.dataset - INFO - Generating synthetic dataset...
+2025-09-01 19:52:38,631 - src.data.physics_engine - ERROR - Failed to load MuJoCo model: Error: range[0] should be 0 in ball joint
+Element name 'larm', id 1, line 25
+2025-09-01 19:52:38,631 - __main__ - ERROR - Training failed with error: Error: range[0] should be 0 in ball joint
+Element name 'larm', id 1, line 25
+2025-09-01 19:53:04,789 - __main__ - INFO - ================================================================================
+2025-09-01 19:53:04,789 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:53:04,789 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:53:04,789 - __main__ - INFO - ================================================================================
+2025-09-01 19:53:04,801 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:53:04,801 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:53:04,801 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:53:04,801 - __main__ - INFO - Device: mps
+2025-09-01 19:53:04,801 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:53:04,801 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:53:04,801 - __main__ - INFO - Batch size: 8
+2025-09-01 19:53:04,801 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:53:04,802 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:53:06,547 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:53:06,547 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:53:06,547 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:53:06,547 - src.training.dataset - INFO - Generating synthetic dataset...
+2025-09-01 19:53:06,548 - __main__ - ERROR - Training failed with error: SimplePhysicsEngine.generate_dataset() got an unexpected keyword argument 'squat_depth_range'
+2025-09-01 19:53:31,955 - __main__ - INFO - ================================================================================
+2025-09-01 19:53:31,955 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:53:31,955 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:53:31,955 - __main__ - INFO - ================================================================================
+2025-09-01 19:53:31,967 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:53:31,967 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:53:31,967 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:53:31,967 - __main__ - INFO - Device: mps
+2025-09-01 19:53:31,967 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:53:31,967 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:53:31,967 - __main__ - INFO - Batch size: 8
+2025-09-01 19:53:31,967 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:53:31,967 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:53:33,675 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:53:33,676 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:53:33,676 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:53:33,676 - src.training.dataset - INFO - Generating synthetic dataset...
+2025-09-01 19:53:33,677 - src.data.simple_physics_engine - INFO - Generating 500 synthetic squat sequences...
+2025-09-01 19:53:33,677 - src.data.simple_physics_engine - INFO - Generated 0/500 sequences
+2025-09-01 19:53:33,952 - src.data.simple_physics_engine - INFO - Generated 100/500 sequences
+2025-09-01 19:53:34,111 - src.data.simple_physics_engine - INFO - Generated 200/500 sequences
+2025-09-01 19:53:34,266 - src.data.simple_physics_engine - INFO - Generated 300/500 sequences
+2025-09-01 19:53:34,422 - src.data.simple_physics_engine - INFO - Generated 400/500 sequences
+2025-09-01 19:53:34,653 - src.data.simple_physics_engine - INFO - Dataset saved to data/synthetic_squats.h5
+2025-09-01 19:53:34,653 - src.data.simple_physics_engine - INFO - Dataset shape: (500, 200, 17, 3)
+2025-09-01 19:53:34,655 - src.training.dataset - INFO - Dataset saved to data/synthetic_squats.h5
+2025-09-01 19:53:34,671 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:53:34,696 - src.training.dataset - INFO - Loaded 50 sequences for val split
+2025-09-01 19:53:39,627 - __main__ - ERROR - Training failed with error: Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/training/dataset.py", line 118, in __getitem__
+    imu_data = self.domain_randomizer.simulate_sensor_noise(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        imu_tensor, duration
+        ^^^^^^^^^^^^^^^^^^^^
+    ).numpy()
+    ^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/data/domain_randomization.py", line 113, in simulate_sensor_noise
+    noisy_data = clean_imu_data.copy()
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+2025-09-01 19:55:37,398 - __main__ - INFO - ================================================================================
+2025-09-01 19:55:37,398 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:55:37,398 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:55:37,398 - __main__ - INFO - ================================================================================
+2025-09-01 19:55:37,410 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:55:37,410 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:55:37,410 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:55:37,410 - __main__ - INFO - Device: mps
+2025-09-01 19:55:37,410 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:55:37,410 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:55:37,410 - __main__ - INFO - Batch size: 8
+2025-09-01 19:55:37,410 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:55:37,411 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:55:39,168 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:55:39,168 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:55:39,168 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:55:39,169 - src.training.dataset - INFO - Using existing dataset at data/synthetic_squats.h5
+2025-09-01 19:55:39,210 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:55:39,253 - src.training.dataset - INFO - Loaded 50 sequences for val split
+2025-09-01 19:55:44,227 - __main__ - ERROR - Training failed with error: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/Users/jonathanschwartz/Documents/Social_Content/onefilellm_venv/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/training/dataset.py", line 118, in __getitem__
+    imu_data = self.domain_randomizer.simulate_sensor_noise(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        imu_tensor, duration
+        ^^^^^^^^^^^^^^^^^^^^
+    ).numpy()
+    ^
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/data/domain_randomization.py", line 134, in simulate_sensor_noise
+    accel_data = self._apply_axis_misalignment(accel_data, config['axis_misalignment_deg'])
+  File "/Users/jonathanschwartz/Documents/Social_Content/QuantumLeap_Pose_Engine/src/data/domain_randomization.py", line 236, in _apply_axis_misalignment
+    aligned_data[t] = R_misalign @ data[t]
+                      ~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for @: 'numpy.ndarray' and 'Tensor'
+
+2025-09-01 19:56:08,602 - __main__ - INFO - ================================================================================
+2025-09-01 19:56:08,603 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:56:08,603 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:56:08,603 - __main__ - INFO - ================================================================================
+2025-09-01 19:56:08,614 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:56:08,615 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:56:08,615 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:56:08,615 - __main__ - INFO - Device: mps
+2025-09-01 19:56:08,615 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:56:08,615 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:56:08,615 - __main__ - INFO - Batch size: 8
+2025-09-01 19:56:08,615 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:56:08,615 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:56:10,434 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:56:10,435 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:56:10,435 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:56:10,435 - src.training.dataset - INFO - Using existing dataset at data/synthetic_squats.h5
+2025-09-01 19:56:10,477 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:56:10,499 - src.training.dataset - INFO - Loaded 50 sequences for val split
+2025-09-01 19:56:36,518 - __main__ - ERROR - Training failed with error: 'masks'
+2025-09-01 19:57:19,837 - __main__ - INFO - ================================================================================
+2025-09-01 19:57:19,837 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:57:19,837 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:57:19,837 - __main__ - INFO - ================================================================================
+2025-09-01 19:57:19,850 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:57:19,850 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:57:19,850 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:57:19,850 - __main__ - INFO - Device: mps
+2025-09-01 19:57:19,850 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:57:19,850 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:57:19,850 - __main__ - INFO - Batch size: 8
+2025-09-01 19:57:19,850 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:57:19,850 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:57:21,651 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:57:21,655 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:57:21,655 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:57:21,655 - src.training.dataset - INFO - Using existing dataset at data/synthetic_squats.h5
+2025-09-01 19:57:21,705 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:57:21,736 - src.training.dataset - INFO - Loaded 50 sequences for val split
+2025-09-01 19:57:45,248 - __main__ - ERROR - Training failed with error: 'exercise_labels'
+2025-09-01 19:58:48,552 - __main__ - INFO - ================================================================================
+2025-09-01 19:58:48,552 - __main__ - INFO - QuantumLeap Pose Engine Training
+2025-09-01 19:58:48,552 - __main__ - INFO - Physics-First AI for Human Pose Estimation
+2025-09-01 19:58:48,552 - __main__ - INFO - ================================================================================
+2025-09-01 19:58:48,571 - __main__ - INFO - Debug mode enabled - using small dataset and few epochs
+2025-09-01 19:58:48,571 - __main__ - INFO - Configuration: mvm
+2025-09-01 19:58:48,571 - __main__ - INFO - Experiment: mvm_squat_baseline_debug
+2025-09-01 19:58:48,571 - __main__ - INFO - Device: mps
+2025-09-01 19:58:48,571 - __main__ - INFO - Model: HDT with 256d, 6 layers
+2025-09-01 19:58:48,571 - __main__ - INFO - Dataset: 500 sequences
+2025-09-01 19:58:48,571 - __main__ - INFO - Batch size: 8
+2025-09-01 19:58:48,571 - __main__ - INFO - Max epochs: 5
+2025-09-01 19:58:48,571 - __main__ - INFO - Configuration saved to: outputs/mvm_squat_baseline_debug/config.json
+2025-09-01 19:58:50,619 - src.training.trainer - INFO - QuantumLeap Trainer initialized on mps
+2025-09-01 19:58:50,619 - src.training.trainer - INFO - Model parameters: 6,107,117
+2025-09-01 19:58:50,619 - src.training.trainer - INFO - Starting QuantumLeap training...
+2025-09-01 19:58:50,619 - src.training.dataset - INFO - Using existing dataset at data/synthetic_squats.h5
+2025-09-01 19:58:50,660 - src.training.dataset - INFO - Loaded 400 sequences for train split
+2025-09-01 19:58:50,740 - src.training.dataset - INFO - Loaded 50 sequences for val split
+2025-09-01 19:59:16,312 - __main__ - ERROR - Training failed with error: The size of tensor a (13) must match the size of tensor b (200) at non-singleton dimension 1
